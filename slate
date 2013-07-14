@@ -1,0 +1,29 @@
+# slate config
+# Author: Eddie Antonio Santos <easantos@ualberta.ca> 
+
+config defaultToCurrentScreen true
+config nudgePercentOf screenSize
+config resizePercentOf screenSize
+
+# Push Bindings
+bind right:ctrl;cmd        push right bar-resize:screenSizeX/3
+bind left:ctrl;cmd         push left  bar-resize:screenSizeX/3
+bind right:ctrl;cmd;shift  push right bar-resize:2*screenSizeX/3
+bind left:ctrl;cmd;shift   push left  bar-resize:2*screenSizeX/3
+
+# Throw Bindings
+bind right:ctrl;alt;cmd throw right resize
+bind left:ctrl;alt;cmd  throw left  resize
+bind up:ctrl;alt;cmd    throw up    resize
+bind down:ctrl;alt;cmd  throw down  resize
+
+# Focus Bindings
+bind right:ctrl:alt      focus right
+bind left:ctrl:alt       focus left
+bind up:ctrl:alt         focus up
+bind down:ctrl:alt       focus down
+bind up:ctrl:alt;shift   focus behind
+bind down:ctrl:alt;shift focus behind
+
+# Window Hints
+bind esc:cmd hint

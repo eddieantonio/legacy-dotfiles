@@ -37,6 +37,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'ervandew/supertab'
 "Bundle 'wakatime/vim-wakatime'
 "Bundle 'marijnh/tern_for_vim'
+Bundle 'eddieantonio/vim-preserve'
 
 " Standard stuff.
 syntax on

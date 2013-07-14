@@ -1,0 +1,7 @@
+[core]
+	excludesfile = /Users/eddieantonio/.gitignore_global
+[user]
+	name = Eddie Antonio Santos
+	email = easantos@ualberta.ca
+[color]
+	ui = true
