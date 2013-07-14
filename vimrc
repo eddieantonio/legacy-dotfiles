@@ -1,9 +1,44 @@
 " .vimrc
 " Author: Eddie Antonio Santos <easantos>
-" See also: .vim/after/plugins, .vim/bundle
+" See also: .vim/after/plugins
 
-" Pathogen first -- Relying on sensible.vim
-execute pathogen#infect()
+" Vundle first -- Relying on sensible.vim
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Colour schemes
+Bundle 'vim-scripts/desertEx'
+
+" Languages
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'jimmyhchan/dustjs.vim'
+Bundle 'elixir-lang/vim-elixir'
+Bundle 'oscarh/vimerl'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jakar/vim-json'
+Bundle 'groenewege/vim-less'
+Bundle 'tpope/vim-markdown'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'wavded/vim-stylus'
+
+" Tim Pope awesomeness.
+Bundle 'tpope/vim-abolish'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-sleuth'
+Bundle 'tpope/vim-surround'
+
+" Other.
+Bundle 'ap/vim-css-color'
+"Bundle 'vim-scripts/license-loader'
+Bundle 'ervandew/supertab'
+"Bundle 'wakatime/vim-wakatime'
+"Bundle 'marijnh/tern_for_vim'
+
+" Standard stuff.
 syntax on
 filetype plugin indent on
 
@@ -24,7 +59,6 @@ set linebreak
 set nowrap " Really hate wrapping.
 set showbreak=»»»»
 set wrapmargin=1 " We'll put a special UTF-8 character to signify long lines.
-"set listchars=tab:␉·,trail:·,eol:¶,extends:…,precedes:…
 set listchars=tab:⇥·,trail:␣,eol:¶,extends:⇉,precedes:⇇,nbsp:·
 
 " Searching stuff
@@ -52,5 +86,3 @@ endif
 let g:SuperTabMappingForward = '<C-Space>'
 let g:SuperTabClosePreviewOnPopupClose = 1
 
-" temp
-let g:tern_show_argument_hints='on_hold'
