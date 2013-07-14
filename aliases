@@ -1,0 +1,56 @@
+# vim: setf zsh
+
+# Aliases (common to bash and zsh)
+
+# "Safe" commands
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -i"
+
+# Awesome LS
+alias ls='ls -Gph'
+alias ll='ls -l'
+alias la='ll -a'
+
+# I like colours.
+alias grep='grep --color'
+
+# Useful aliases
+alias tarz='tar -xzvf'
+alias svi="sudo vim"
+alias mkdir='mkdir -p'
+
+# Mocha stuff.
+alias 'macchiato'='mocha --compilers coffee:coffee-script --watch --reporter min'
+
+# Use VIM as my pager
+alias vless='/usr/share/vim/vim73/macros/less.sh'
+
+# column awk
+function fawk {
+    first="awk '{print "
+    last="}'"
+    cmd="${first}\$${1}${last}"
+    eval $cmd
+}
+
+# For no real reason: 
+alias rot13="tr '[A-Za-z]' '[N-ZA-Mn-za-m]'"
+
+# "UNIX legos", as Calvin calls 'em:
+# Find within all text files
+alias text='find . ! -path "*/.git/*" ! -path "*/.hg/*" | xargs file | grep text | cut -f 1 -d ":" | xargs'
+
+# Clean all Vim undo files.
+alias vimclean='find . -name ".*.un~" -delete'
+
+# Starts the named virtual machine.
+function vm-start {
+   VBoxManage startvm $1 --type headless 
+}
+
+# Virtual Machine aliases
+alias start-obsd='vm-start openbsd-staging'
+alias start-ubun='vm-start ubuntu-staging'
+alias start-mngo='vm-start ubuntu-mongo'
+
