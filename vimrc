@@ -19,6 +19,7 @@ Bundle 'digitaltoad/vim-jade'
 Bundle 'pangloss/vim-javascript'
 Bundle 'jakar/vim-json'
 Bundle 'groenewege/vim-less'
+Bundle 'mintplant/vim-literate-coffeescript'
 Bundle 'tpope/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'wavded/vim-stylus'
@@ -32,12 +33,17 @@ Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
 
 " Other.
+Bundle 'vim-scripts/a.vim'
 Bundle 'ap/vim-css-color'
-"Bundle 'vim-scripts/license-loader'
-Bundle 'ervandew/supertab'
-"Bundle 'wakatime/vim-wakatime'
-"Bundle 'marijnh/tern_for_vim'
+Bundle 'vim-scripts/jshint2.vim'
 Bundle 'eddieantonio/vim-preserve'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+
+" TEMPORARILY DISABLE PYLINT:
+let g:syntastic_python_checkers=['python']
+" And use Python 3!
+let g:syntastic_python_python_exe = 'python3'
 
 " Standard stuff.
 syntax on
@@ -53,6 +59,13 @@ let mapleader=","
 " Enable the dang mouse!
 if has('mouse')
   set mouse=a
+endif
+
+" Uncomment the following to have Vim jump to the last position when
+" " reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
 endif
 
 " Wrapping junk:

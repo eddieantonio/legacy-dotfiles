@@ -42,9 +42,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial brew npm scala python cake colored-man osx nyan fabric)
+plugins=(git mercurial brew npm scala python colored-man osx nyan fabric)
 
 source $ZSH/oh-my-zsh.sh
+
+# `gm`, imported from the git plugin, conflicts with GraphicsMagick
+unalias gm
 
 # Awesome globs
 setopt extendedglob
@@ -56,5 +59,7 @@ unsetopt clobber beep
 
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
 # Ma editor.
 export EDITOR=vim
