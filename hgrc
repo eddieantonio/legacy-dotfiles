@@ -1,0 +1,7 @@
+[ui]
+username = Eddie Antonio Santos <easantos@ualberta.ca>
+ignore = ~/.hgignore_global
+
+[extensions]
+color =
+

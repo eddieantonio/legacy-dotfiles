@@ -16,9 +16,6 @@ Thumbs.db
 # Node JS
 /node_modules/
 
-# Oh My ZSH! stuff
-.cake_task_cache
-
 # Python
 __pycache__
 *.py[co]

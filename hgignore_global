@@ -1,0 +1,9 @@
+syntax: glob
+
+# Vim stuff
+.*un~
+.*.sw[op]
+
+# Python junk
+*.pyc
+__pycache__
