@@ -17,12 +17,14 @@ Bundle 'elixir-lang/vim-elixir'
 Bundle 'oscarh/vimerl'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'pangloss/vim-javascript'
+Bundle 'othree/html5.vim'
 Bundle 'jakar/vim-json'
 Bundle 'groenewege/vim-less'
 Bundle 'mintplant/vim-literate-coffeescript'
 Bundle 'tpope/vim-markdown'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'wavded/vim-stylus'
+"Bundle 'vim-pandoc/vim-pandoc'
 
 " Tim Pope awesomeness.
 Bundle 'tpope/vim-abolish'
@@ -31,14 +33,17 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-dispatch'
 
 " Other.
 Bundle 'vim-scripts/a.vim'
 Bundle 'ap/vim-css-color'
 Bundle 'vim-scripts/jshint2.vim'
 Bundle 'eddieantonio/vim-preserve'
+Bundle 'tristen/vim-sparkup'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/syntastic'
+"Bundle 'wakatime/vim-wakatime'
 
 " TEMPORARILY DISABLE PYLINT:
 let g:syntastic_python_checkers=['python']

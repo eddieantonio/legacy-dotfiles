@@ -5,13 +5,13 @@
 vnoremap Q gq
 nnoremap Q vipgq
 
-" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
-" so that you can undo CTRL-U after inserting a line break.
-inoremap <C-U> <C-G>u<C-U>
-
 " Visual shifting (does not exit Visual mode)
 vnoremap < <gv
 vnoremap > >gv
+
+" So U No when U Get UPSET when a mapping is removed from vimSensible
+" and U Quickly go to salvage it?
+nnoremap Y y$
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -33,6 +33,9 @@ set pastetoggle=<F2>
 
 " Quick set spell.
 nnoremap <Leader>sp :set spell!<CR>
+
+" Vim-Dispatch, I guess...
+nnoremap <Leader>m Make 
 
 " Using vim-preserve
 " Strip all trailing whitespace in a file
