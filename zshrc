@@ -42,7 +42,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git mercurial brew npm scala python colored-man osx mvn nyan fabric)
+plugins=(
+    git
+    brew
+    fabric
+    npm mvn sbt rebar
+    vundle
+    scala python
+    colored-man osx
+    nyan
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -60,6 +69,10 @@ unsetopt clobber beep
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export ANDROID_HOME=/usr/local/opt/android-sdk
+export ERL_LIBS=.
+export LANG="en_CA.UTF-8"
 
 # Ma editor.
 export EDITOR=vim
+export VISUAL=vim
+

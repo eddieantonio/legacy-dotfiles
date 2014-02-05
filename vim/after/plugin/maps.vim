@@ -35,13 +35,15 @@ set pastetoggle=<F2>
 nnoremap <Leader>sp :set spell!<CR>
 
 " Vim-Dispatch, I guess...
-nnoremap <Leader>m Make 
+nnoremap <Leader>m :Make<CR>
 
 " Using vim-preserve
 " Strip all trailing whitespace in a file
 nmap <Leader>$ :call Preserve("%s/\\s\\+$//e")<CR>
 " Reformat the entire file
 nmap <Leader>= :call Preserve("normal gg=G")<CR>
+" Reformat the entire file
+nmap <Leader>y :call Preserve("normal gg\"+yG")<CR>
 
 " Copy some lines into the OS X clipboard
 vnoremap <silent> <Leader>y :!pbcopy<CR>u

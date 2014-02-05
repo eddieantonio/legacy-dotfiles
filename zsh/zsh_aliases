@@ -34,3 +34,9 @@ function mkscript {
 
 }
 
+# WRS 101, yo!
+function inkshed {
+    filename="E.Santos.Inkshed.$1"
+    echo "% Inkshed $1\n% Eddie Santos" > $filename.md
+    vim $filename.md && pandoc -S $filename.md -o $filename.docx
+}
